@@ -69,8 +69,8 @@ export default class Landing extends Component {
                             <Icon name='menu' />
                         </Button>
                     </Left>
-                    <Body style={{ width: 266, marginLeft: 0 }}>
-                        <Title style={{ fontSize: 14, width: 206, marginLeft: 0 }}>Inventory Management System</Title>
+                    <Body style={{ width: width, marginLeft: 0,alignItems:'center' }}>
+                        <Title style={{ fontSize: 14, width: width, marginLeft: 0 }}>Inventory Management System</Title>
                     </Body>
                     <Right>
                         <Button transparent>
@@ -91,7 +91,7 @@ export default class Landing extends Component {
                 <View style={{ flexDirection: 'row' ,  marginTop:8}}>
                     <Text style={{ margin: 8, color: 'black', fontSize: 15 }}>From Date</Text>
                     <DatePicker
-                        style={{ width: 270 , marginLeft:40}}
+                        style={{ width: width-148 , marginLeft:30}}
                         date={this.state.fromdate}
                         mode="date"
                         placeholder="select date"
@@ -103,7 +103,7 @@ export default class Landing extends Component {
                         customStyles={{
                             dateIcon: {
                                 position: 'absolute',
-                                left: 225,
+                                left: width-200,
                                 top: 4,
                                 marginLeft: 5
                             },
@@ -118,7 +118,7 @@ export default class Landing extends Component {
                 <View style={{ flexDirection: 'row' , marginTop:8}}>
                     <Text style={{ margin: 8, color: 'black', fontSize: 15 }}>To Date     </Text>
                     <DatePicker
-                        style={{ width: 270 , marginLeft:40}}
+                        style={{ width: width-148 , marginLeft:30}}
                         date={this.state.todate}
                         mode="date"
                         placeholder="select date"
@@ -130,7 +130,7 @@ export default class Landing extends Component {
                         customStyles={{
                             dateIcon: {
                                 position: 'absolute',
-                                left: 225,
+                                left: width-200,
                                 top: 4,
                                 marginLeft: 5
                             },

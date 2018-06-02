@@ -67,7 +67,7 @@ class SideBar extends Component {
 
               <View style={{ flexDirection: 'row' }}>
                 <Icon name='md-filing' style={{ margin: 10, marginLeft: 5, fontSize: 25 }} />
-                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Home')}>
+                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Email')}>
                   Email Template
               </Text>
               </View>

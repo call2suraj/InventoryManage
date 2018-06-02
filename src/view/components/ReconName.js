@@ -28,10 +28,10 @@ export default class ReconName extends Component {
   render() {
     return (
         <View style={{flexDirection:'row'}}>
-            <Text style={{margin:7, color:'black', fontSize:15, width:100}}>Recon Name</Text>
+            <Text style={{margin:10, color:'black', fontSize:15, width:100}}>Recon Name</Text>
         <Picker
             selectedValue={this.state.language}
-            style={{ height: 30, width: width-130, marginLeft:20, marginTop:2 }}
+            style={{width: width-138, margin:0,marginTop:0 }}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             <Picker.Item label="USA Cost Recon - Walmart GM" value="USA" />
             <Picker.Item label="UK Cost Recon - Walmart GM" value="UK" />

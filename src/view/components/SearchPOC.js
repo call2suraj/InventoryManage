@@ -35,39 +35,39 @@ export default class SearchPOC extends Component {
                 <ScrollView style={{ marginBottom: 2, backgroundColor: 'white' }}>
                     {filteredEmails.map(data => {
                         return (
-                            <Card key={data._id}>
+                            <Card key={data._id} style={{margin:10}}>
                                 <View style={{ marginTop: 8, }} >
 
                                     <View style={{ flexDirection: 'row', }}>
                                         <View style={{ margin: 8, flexDirection: 'row', width: 100 }}>
                                             <Text style={{ width: 80, fontSize:16 ,color:'#3f51b5'}}>Country</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16 ,color:'#3f51b5'}}>: {data.Location}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16 ,color:'#3f51b5', width: 150 }}>: {data.Location}</Text>
                                         </View>
 
-                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 50 }}>
+                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 80 }}>
                                             <Text style={{ width: 80 , fontSize:16,color:'#3f51b5'}}>Product</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16,color:'#3f51b5'}}>: {data.Product}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16,color:'#3f51b5', width: 150 }}>: {data.Product}</Text>
                                         </View>
                                     </View>
                                     <View style={{ flexDirection: 'row' }}>
                                         <View style={{ margin: 8, flexDirection: 'row', width: 100 }}>
                                             <Text style={{ width: 80 , fontSize:16,color:'#3f51b5'}}>Banner</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16,color:'#3f51b5'}}>: {data.Subject}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16,color:'#3f51b5', width: 150 }}>: {data.Subject}</Text>
                                         </View >
 
-                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 50 }}>
+                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 80 }}>
                                             <Text style={{ width: 80 , fontSize:16,color:'#3f51b5'}}>Type</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16,color:'#3f51b5'}}>: {data.AlertType}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16,color:'#3f51b5', width: 150 }}>: {data.AlertType}</Text>
                                         </View>
                                     </View>
                                     <View style={{ flexDirection: 'row' }}>
                                         <View style={{ margin: 8, flexDirection: 'row', width: 100 }}>
                                             <Text style={{ width: 80 , fontSize:16,color:'#3f51b5'}}>Priority</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16,color:'#3f51b5'}}>: {data.AlertPriority}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16,color:'#3f51b5', width: 150 }}>: {data.AlertPriority}</Text>
                                         </View>
-                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 50 }}>
+                                        <View style={{ margin: 8, flexDirection: 'row', width: 100, marginLeft: 80 }}>
                                             <Text style={{ width: 80 , fontSize:16,color:'#3f51b5'}}>Status</Text>
-                                            <Text style={{ marginLeft: 10 , fontSize:16,color:'#3f51b5'}}>: {data.AlertStatus}</Text>
+                                            <Text style={{ marginLeft: 5 , fontSize:16,color:'#3f51b5', width: 150 }}>: {data.AlertStatus}</Text>
                                         </View>
                                     </View>
                                 </View>
@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
         color: 'rgba(0,0,0,0.5)'
     },
     searchInput: {
-        padding: 10,
+        padding: 5,
         borderColor: '#CCC',
-        borderWidth: 1
+        borderWidth: 0
     }
 })

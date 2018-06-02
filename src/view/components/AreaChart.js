@@ -26,18 +26,18 @@ export default class SummaryReport extends React.PureComponent {
 
     constructor(props) {
         super(props)
-        this.state = { 
+        this.state = {
             showFirstData: false,
-            showSecondData: false ,
-            showThirdData: false ,
+            showSecondData: false,
+            showThirdData: false,
         }
-        
+
     }
 
     onPress = () => {
         this.setState({
             showFirstData: !this.state.showFirstData,
-           
+
         })
     }
 
@@ -116,9 +116,9 @@ export default class SummaryReport extends React.PureComponent {
 
 
                 <ScrollView>
-                    <Card style={this.state.showFirstData ? { borderWidth: 2, marginRight: 7, height: 380, marginLeft: 7 } 
-                    : 
-                    { borderWidth: 2, marginRight: 7, height: 300, marginLeft: 7 }}>
+                    <Card style={this.state.showFirstData ? { borderWidth: 2, marginRight: 7, height: 380, marginLeft: 7 }
+                        :
+                        { borderWidth: 2, marginRight: 7, height: 300, marginLeft: 7 }}>
                         <Text style={{ fontSize: 18, color: '#3f51b5', margin: 5 }}>Percent Details</Text>
 
                         <View style={{ height: 200, flexDirection: 'row' }}>
@@ -146,90 +146,84 @@ export default class SummaryReport extends React.PureComponent {
                                 alignItems: 'center',
                                 backgroundColor: 'white',
                                 padding: 10,
-                                
+
                             }}
                             onPress={this.onPress}
                         >
-                        { this.state.showFirstData ? <Text style={{color: '#3f51b5'}}> Hide Data </Text> :  <Text style={{color: '#3f51b5'}}> Show Data </Text> }
+                            {this.state.showFirstData ? <Text style={{ color: '#3f51b5' }}> Hide Data </Text> : <Text style={{ color: '#3f51b5' }}> Show Data </Text>}
                         </TouchableOpacity>
-                        {this.state.showFirstData ? 
-                        <View>
+                        {this.state.showFirstData ?
+                            <View>
 
-                        
-                        <View style={{flexDirection:'row'}}>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory US </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory UK </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 50 </Text>
-                            <Text> 10 </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory MX </Text>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory IN </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 40 </Text>
-                            <Text> 95 </Text>
-                            </View>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory CA </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory FR </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 4 </Text>
-                            <Text> -24 </Text>
-                            </View>
-                            </View> 
-                            
+                                <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'column',width:200 }}>
 
 
-                             <View style={{flexDirection:'row'}}>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory Pali </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory Wmt </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 85 </Text>
-                            <Text> 91 </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory Sams </Text>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory ASDA </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 35 </Text>
-                            <Text> 53 </Text>
-                            </View>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory FL </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory GR </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> -53 </Text>
-                            <Text> 24 </Text>
-                            </View>
-                            </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory US </Text>
+                                            <Text style={{ width: 100 }}>50</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory UK </Text>
+                                            <Text style={{ width: 100 }}>10</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Sams </Text>
+                                            <Text style={{ width: 100 }}>81</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Wmt </Text>
+                                            <Text style={{ width: 100 }}>-44</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory CA </Text>
+                                            <Text style={{ width: 100 }}>12</Text>
+                                        </View>
+                                    </View>
 
 
-                            </View>: null}
+                                    <View style={{ flexDirection: 'column' }}>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Pali </Text>
+                                            <Text style={{ width: 100 }}>55</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory IN </Text>
+                                            <Text style={{ width: 100 }}>-78</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory CA </Text>
+                                            <Text style={{ width: 100 }}>90</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory FR </Text>
+                                            <Text style={{ width: 100 }}>30</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Mx </Text>
+                                            <Text style={{ width: 100 }}>43</Text>
+                                        </View>
+                                    </View>
+
+                                </View>
+
+                                
+
+
+                            </View> : null}
                     </Card>
 
 
 
 
-                    <Card style={this.state.showSecondData ? { borderWidth: 2, marginRight: 7, height: 480, marginLeft: 7 } 
-                    : 
-                    { borderWidth: 2, marginRight: 7, height: 300, marginLeft: 7 }}>
+                    <Card style={this.state.showSecondData ? { borderWidth: 2, marginRight: 7, height: 380, marginLeft: 7 }
+                        :
+                        { borderWidth: 2, marginRight: 7, height: 300, marginLeft: 7 }}>
                         <Text style={{ fontSize: 18, color: '#3f51b5', margin: 5 }}>Inventory Details</Text>
 
                         <BarChart
@@ -249,79 +243,72 @@ export default class SummaryReport extends React.PureComponent {
                             }}
                             onPress={this.onSecondPress}
                         >
-                        { this.state.showSecondData ? <Text style={{color: '#3f51b5'}}> Hide Data </Text> :  <Text style={{color: '#3f51b5'}}> Show Data </Text> }
-                           
+                            {this.state.showSecondData ? <Text style={{ color: '#3f51b5' }}> Hide Data </Text> : <Text style={{ color: '#3f51b5' }}> Show Data </Text>}
+
                         </TouchableOpacity>
-                        {this.state.showSecondData ? 
-                        <View>
-
-                        
-                        <View style={{flexDirection:'row'}}>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory US </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory UK </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 50 </Text>
-                            <Text> 10 </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory MX </Text>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory IN </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 40 </Text>
-                            <Text> 95 </Text>
-                            </View>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory CA </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory FR </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 4 </Text>
-                            <Text> -24 </Text>
-                            </View>
-                            </View> 
-                            
+                        {this.state.showSecondData ?
+                            <View>
 
 
-                             <View style={{flexDirection:'row'}}>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory Pali </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory Wmt </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 85 </Text>
-                            <Text> 91 </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory Sams </Text>
-                            <Text style={{width:120, fontWeight:'500'}}> Inventory ASDA </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> 35 </Text>
-                            <Text> 53 </Text>
-                            </View>
-                            <View style={{flexDirection:'column'}}>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory FL </Text>
-                            <Text style={{width:100, fontWeight:'500'}}> Inventory GR </Text>
-                            </View>
-                           
-                            <View style={{flexDirection:'column'}}>
-                            <Text> -53 </Text>
-                            <Text> 24 </Text>
-                            </View>
-                            </View>
+                                 <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'column',width:200 }}>
 
 
-                            </View>: null}
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory US </Text>
+                                            <Text style={{ width: 100 }}>88</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory UK </Text>
+                                            <Text style={{ width: 100 }}>56</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Sams </Text>
+                                            <Text style={{ width: 100 }}>90</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Wmt </Text>
+                                            <Text style={{ width: 100 }}>76</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory CA </Text>
+                                            <Text style={{ width: 100 }}>32</Text>
+                                        </View>
+                                    </View>
+
+
+                                    <View style={{ flexDirection: 'column' }}>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Pali </Text>
+                                            <Text style={{ width: 100 }}>22</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory IN </Text>
+                                            <Text style={{ width: 100 }}>54</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory CA </Text>
+                                            <Text style={{ width: 100 }}>-33</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory FR </Text>
+                                            <Text style={{ width: 100 }}>11</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: 120, fontWeight: '500' }}> Inventory Mx </Text>
+                                            <Text style={{ width: 100 }}>-23</Text>
+                                        </View>
+                                    </View>
+
+                                </View>
+
+
+                            </View> : null}
 
 
                     </Card>

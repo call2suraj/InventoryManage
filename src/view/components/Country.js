@@ -27,11 +27,11 @@ export default class Country extends Component {
   }
   render() {
     return (
-        <View style={{flexDirection:'row', marginTop:5}}>
-            <Text style={{margin:8, color:'black', fontSize:15, width:100}}>Country</Text>
+        <View style={{flexDirection:'row', marginTop:0}}>
+            <Text style={{margin:10, color:'black', fontSize:15, width:100}}>Country</Text>
         <Picker
             selectedValue={this.state.language}
-            style={{ height: 30, width: width-130, marginLeft:20,marginTop:2 }}
+            style={{  width: width-140, margin:0,marginTop:0 }}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             <Picker.Item label="United State" value="USA" />
             <Picker.Item label="United Kingdom" value="UK" />

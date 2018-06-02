@@ -54,7 +54,7 @@ export default class ShrinkProvision extends Component {
         this.setState({ checked: !this.state.checked });
     }
 
-    onLogin(){
+    onLogin() {
     }
 
     render() {
@@ -83,70 +83,74 @@ export default class ShrinkProvision extends Component {
                     </Right>
                 </Header>
 
-                <View>
-
-                    <Country />
-                </View>
-
-                <View>
-
-                    <Banner />
-                </View>
-
-                <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ margin: 8, color: 'black', fontSize: 15,  marginBottom: 10 }}>Dept No</Text>
-                    <TextInput
-                        style={{ margin: 5, height: 35, width: 300, borderColor: 'gray', borderWidth:1,marginBottom: 10, marginLeft: 30 }}
-                        onChangeText={(text) => this.setState({ text })}
-                        value={this.state.text}
-                    />
-                </View>
-                <Card style={{ borderWidth: 2, margin:5, height:300 }}>
-                <Text style={{fontSize:18, color:'#3f51b5',}}>Percent Details</Text>
-                    
-                    <View style={{ flexDirection: 'row' }}>
-
-                        <Item floatingLabel style={{ width: 170, marginLeft: 5 }}>
-                            <Label style={{ fontSize: 15, }}>New Store Cost</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last style={{ width: 220, marginLeft: 5 }}>
-                            <Label style={{ fontSize: 15, }}>New Store Retail</Label>
-                            <Input />
-                        </Item>
-
-                    </View>
-
-                    <View style={{ flexDirection: 'row' }}>
-                        <Item floatingLabel style={{ width: 170, marginLeft: 5 }}>
-                            <Label style={{ fontSize: 15, }}>Exist Store Above Max</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last style={{ width: 220, marginLeft: 5, }}>
-                            <Label style={{ fontSize: 15, }}>Exist Store Retail Above Max</Label>
-                            <Input />
-                        </Item>
-                    </View>
-
-                    <View style={{ flexDirection: 'row' }}>
-                        <Item floatingLabel style={{ width: 170, marginLeft: 5 }}>
-                            <Label style={{ fontSize: 15, }}>Exist Store Below Min</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last style={{ width: 220, marginLeft: 5, }}>
-                            <Label style={{ fontSize: 15, }}>Exist Store Retail Below Min</Label>
-                            <Input />
-                        </Item>
-                    </View>
-                    <Button full success style={{ margin: 2, alignItems: 'center', marginTop: 4 }} onPress={this.onSave}>
-                <Text style={{ textAlign: 'center', paddingLeft: 5, marginLeft: 11, color: 'white' }}>SAVE</Text>
-               
-              </Button>
-                </Card>
-
                 <ScrollView style={{ marginTop: 0 }}>
-                <LiveData />
-            </ScrollView>
+
+                    <Card style={{ borderWidth: 0, margin: 0, marginBottom: 0 }}>
+
+                        <View>
+
+                            <Country />
+                        </View>
+
+                        <View>
+
+                            <Banner />
+                        </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={{ margin: 8, color: 'black', fontSize: 15, marginBottom: 5 }}>Dept No</Text>
+                            <TextInput keyboardType="numeric"
+                                style={{ height: 40, width: 220, borderColor: 'gray', borderWidth: 1, marginLeft: 60 }}
+                                onChangeText={(text) => this.setState({ text })}
+                                value={this.state.text}
+                            />
+                        </View>
+
+
+                        <Text style={{ fontSize: 15, color: '#3f51b5', }}>Percent Details</Text>
+
+                        <View style={{ flexDirection: 'row' }}>
+
+                            <Item floatingLabel style={{ width: 155, marginLeft: 0 }}>
+                                <Label style={{ fontSize: 14, }}>New Store Cost</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+                            <Item floatingLabel last style={{ width: 235, marginLeft: 0 }}>
+                                <Label style={{ fontSize: 14, }}>New Store Retail</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+
+                        </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+                            <Item floatingLabel style={{ width: 155, marginLeft: 0 }}>
+                                <Label style={{ fontSize: 14, }}>Exist Store Above Max</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+                            <Item floatingLabel last style={{ width: 235, marginLeft: 0, }}>
+                                <Label style={{ fontSize: 14, }}>Exist Store Retail Above Max</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+                        </View>
+
+                        <View style={{ flexDirection: 'row' }}>
+                            <Item floatingLabel style={{ width: 155, marginLeft: 0 }}>
+                                <Label style={{ fontSize: 14, }}>Exist Store Below Min</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+                            <Item floatingLabel last style={{ width: 235, marginLeft: 0, }}>
+                                <Label style={{ fontSize: 15, }}>Exist Store Retail Below Min</Label>
+                                <Input keyboardType="numeric" />
+                            </Item>
+                        </View>
+                        <Button full success style={{ marginBottom: 10, marginTop: 5 }} onPress={this.onSave}>
+                            <Text style={{ textAlign: 'center', paddingLeft: 5, marginLeft: 11, color: 'white' }}>SAVE</Text>
+
+                        </Button>
+
+                        <LiveData />
+                    </Card>
+                </ScrollView>
 
 
                 <View>

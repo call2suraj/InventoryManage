@@ -27,17 +27,20 @@ export default class AccountMethod extends Component {
   }
   render() {
     return (
-        <View style={{flexDirection:'row', marginTop:5}}>
-            <Text style={{margin:8, color:'black', fontSize:15}}>Recon Method </Text>
+      
+<View style={{flexDirection:'row'}}>
+            <Text style={{margin:10, color:'black', fontSize:15, width:100, paddingTop:4}}>Recon Method</Text>
         <Picker
             selectedValue={this.state.language}
-            style={{ height: 30, width: width-130, marginLeft:20,marginTop:2 }}
+            style={{ width: width-138, margin:0,marginTop:0 }}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
-            <Picker.Item label="Cost" value="Cost" />
+           <Picker.Item label="Cost" value="Cost" />
             <Picker.Item label="Retail" value="Retail" />
             <Picker.Item label="Margin" value="Margin" />
         </Picker>
         </View>
+
+
     );
   }
 }

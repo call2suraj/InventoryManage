@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import Country from './Country';
 import Banner from './Banner';
-
+const { width, height } = Dimensions.get('window');
 import {
     Container, Header, Left, Body, Right, Button, Icon,
     Title, Drawer, Content, Card, CardItem, ListItem,
@@ -58,7 +58,7 @@ onClick(){
 
        <Container>
                 
-
+                <ScrollView style={{ marginTop: 0 }}>
                 <View>
 
                     <Country />
@@ -71,8 +71,8 @@ onClick(){
 
                  <View style={{ flexDirection: 'row' }}>
                     <Text style={{ margin: 8, color: 'black', fontSize: 15,  marginBottom: 10 }}>Fiscal Year</Text>
-                    <TextInput
-                        style={{ margin: 5, height: 35, width: 260, borderColor: 'gray', borderWidth:1,marginBottom: 10, marginLeft: 50 }}
+                    <TextInput keyboardType="numeric"
+                        style={{ margin: 5, height: 35, width: 230, borderColor: 'gray', borderWidth:1,marginBottom: 10, marginLeft: 35 }}
                         onChangeText={(text) => this.setState({ text })}
                         value={this.state.text}
                     />
@@ -88,7 +88,7 @@ onClick(){
                         </Item>
                         <Item floatingLabel last style={{ width: 220, marginLeft: 5 }}>
                             <Label style={{ fontSize: 15, }}>Cost</Label>
-                            <Input />
+                            <Input keyboardType="numeric"/>
                         </Item>
 
                     </View>
@@ -96,7 +96,7 @@ onClick(){
                     <View style={{ flexDirection: 'row' }}>
                         <Item floatingLabel style={{ width: 170, marginLeft: 5 }}>
                             <Label style={{ fontSize: 15, }}>Retail</Label>
-                            <Input />
+                            <Input keyboardType="numeric"/>
                         </Item>
                         <Item floatingLabel last style={{ width: 220, marginLeft: 5, }}>
                             <Label style={{ fontSize: 15, }}>Location</Label>
@@ -114,14 +114,17 @@ onClick(){
                             <Input />
                         </Item>
                     </View>
-                    <Button full success style={{ margin: 2, alignItems: 'center', marginTop: 15}} onPress={this.onSave}>
+                    <View style={{ flexDirection: 'row' , marginBottom:0,alignItems: 'center' }}>
+                    <Button full success style={{ margin: 0,  marginTop: 15,width:width, marginBottom:0}} onPress={this.onSave}>
                 <Text style={{ textAlign: 'center', paddingLeft: 5, marginLeft: 11, color: 'white' }}>SAVE</Text>
                
               </Button>
+                     </View>
+                   
                 </Card>
 
 
-                <ScrollView style={{ marginTop: 0 }}>
+               
               <MockData />
             </ScrollView>
 

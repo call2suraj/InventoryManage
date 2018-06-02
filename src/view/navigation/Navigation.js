@@ -1,5 +1,6 @@
 import { DrawerNavigator , TabNavigator} from 'react-navigation';
 import React, { Component } from 'react';
+import FCM from "react-native-fcm";
 import Login from '../containers/Login';
 import SideBar from '../components/SideBar';
 import HamMenu from '../components/HamMenu';
@@ -11,6 +12,7 @@ import ProfileConfig from '../containers/ProfileConfig';
 import ReconLineConfig from '../containers/ReconLineConfig';
 import TabOne from '../components/TabOne';
 import TabTwo from '../components/TabTwo';
+import Email from '../components/Email';
 export default DrawerNavigator({
     First: {
       screen: Login,
@@ -42,7 +44,10 @@ export default DrawerNavigator({
       ReconLineConfig: {
         screen: ReconLineConfig
       },
-
+      
+      Email: {
+        screen: Email
+      },
       Home: {
         screen: TabNavigator({
           Home: {

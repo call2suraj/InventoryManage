@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import FCM from "react-native-fcm";
 import {
   StyleSheet,
   Text,
@@ -25,7 +25,8 @@ export default class Login extends Component {
     this.state = {
       flag: true,
       selected1: "key0",
-      checked: false
+      checked: false,
+      fcm_token: "",
     };
     this.handleCheckbox = this.handleCheckbox.bind(this);
     this.onLogin = this.onLogin.bind(this);
@@ -34,6 +35,13 @@ export default class Login extends Component {
     header: null
   };
 
+  componentDidMount () {
+    FCM.requestPermissions();
+    FCM.getFCMToken().then(token => {
+      this.setState({fcm_token:token});
+      //update your fcm token on server.
+    });
+   }
 
   onValueChange(value) {
     this.setState({

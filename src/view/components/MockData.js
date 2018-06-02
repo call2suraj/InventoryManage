@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import data from '../../data/recondata';
-const KEYS_TO_FILTERS = ['linename', 'location','city','state'];
+const KEYS_TO_FILTERS = ['linename', 'location','city','state','magr','banner','dept'];
  
 export default class MockData extends Component{
  constructor(props) {
