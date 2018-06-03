@@ -16,8 +16,9 @@ class SideBar extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{backgroundColor:'#3f51b5'}}>
-          <Icon name='home' style={{ fontSize: 35, color: 'white', marginLeft: 185, }} onPress={this.navigateToScreen('Landing')} />
+        <View style={{backgroundColor:'#3f51b5', flexDirection:'row'}}>
+        <Icon name='home' style={{ fontSize: 30, color: 'white', marginLeft: 125, }} onPress={this.navigateToScreen('Landing')} />
+          <Icon name='md-log-out' style={{ fontSize: 30, color: 'white', marginLeft: 20, }} onPress={this.navigateToScreen('First')} />
         </View>
         <ScrollView>
 
@@ -53,7 +54,7 @@ class SideBar extends Component {
 
               <View style={{ flexDirection: 'row' }}>
                 <Icon name='md-cart' style={{ margin: 10, marginLeft: 5, fontSize: 25 }} />
-                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Page2')}>
+                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('SwipeList')}>
                   Department
               </Text>
               </View>

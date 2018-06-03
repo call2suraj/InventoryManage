@@ -13,6 +13,7 @@ import ReconLineConfig from '../containers/ReconLineConfig';
 import TabOne from '../components/TabOne';
 import TabTwo from '../components/TabTwo';
 import Email from '../components/Email';
+import SwipeList from '../components/SwipeList';
 export default DrawerNavigator({
     First: {
       screen: Login,
@@ -43,6 +44,8 @@ export default DrawerNavigator({
       },
       ReconLineConfig: {
         screen: ReconLineConfig
+      },SwipeList: {
+        screen: SwipeList
       },
       
       Email: {

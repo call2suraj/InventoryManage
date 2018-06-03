@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Text, View, StyleSheet,Picker,TextInput,Image,Button,ListView, TouchableOpacity,ScrollView,} from 'react-native';
 import SearchPOC from './SearchPOC';
 import axios from 'axios';
+import { Container, Header, Content, Spinner } from 'native-base';
 export default class LiveData extends Component{
 
   static navigationOptions = {
@@ -52,7 +53,9 @@ export default class LiveData extends Component{
     return (
       <ScrollView style={{marginBottom:1}}>
         {
-          this.state.data != '' ? <SearchPOC buttonShow={false} passedData={this.state.data}/> :<View></View>
+          this.state.data != '' ? <SearchPOC buttonShow={false} passedData={this.state.data}/> :<View>
+            <Spinner color='red' />
+          </View>
         }
       </ScrollView>
     );
